@@ -20,7 +20,7 @@ When you log in, it will prompt you for your password, if you are using ur cs15l
 You should be able to see a line where it gives you the name of the code, the percentage transferred, the number of characters in the file, and a few more things. 
 ![Image](week-1-3.png)
 
-5.Setting an SSH Key!! Now, you will see how I made it so that I wouldn't have to retype my password everytime I log into the remote account. This can be done using the command ssh-keygen, creating a public key and private key. For this step you can see the commands needed to in order to achieve that. Based on the information given in the lab instructions, what it does is essentially create two files, the private key (id_rsa), and the public key (id_sra.pub. The public key is copied to the server, and the privete ket is on the client, and ssh uses the two files instead of the password. 
+5.Setting an SSH Key!! Now, you will see how I made it so that I wouldn't have to retype my password everytime I log into the remote account. This can be done using the command ssh-keygen, creating a public key and private key. For this step you can see the commands needed to in order to achieve that. Based on the information given in the lab instructions, what it does is essentially create two files, the private key (id_rsa), and the public key (id_sra.pub). The public key is copied to the server, and the privete key is on the client, and ssh uses the two files instead of the password to log in. 
 
 ![Image](week-1-4.png)
 
