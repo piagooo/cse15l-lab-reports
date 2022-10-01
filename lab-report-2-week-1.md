@@ -28,3 +28,6 @@ You should be able to see a line where it gives you the name of the code, the pe
 
 The commands I used to do this was scp WhereAmI.java s1gomez@ieng6.ucsd.edu~/ which was easily accessed using the up arrow from when I had previously typed it out, and then ssh s1gomez@ieng6.ucsd.edu "javac WhereAmI.java; java WhereAmI" and that seemed to work? I basically just copy the file, and in the second command I logged in and compiled/ran the file.
 ![Image](week-1-7.png)
+
+
+And that's it!! Hopefully it works for you!1 I have to get help for my cs15lfa22 account and maybe I'll return and make changes to this page once I do. 
