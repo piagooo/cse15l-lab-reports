@@ -24,7 +24,7 @@ You should be able to see a line where it gives you the name of the code, the pe
 
 ![Image](week-1-4.png)
 
-6. Optimizing Remote Building. I wasn't sure if I did this correctly but the objective of this task was to make to most "pleasant process" for making an edit to WhereAmI.java and then copying the file to the remote server and running it. 
+6.Optimizing Remote Building. I wasn't sure if I did this correctly but the objective of this task was to make to most "pleasant process" for making an edit to WhereAmI.java and then copying the file to the remote server and running it. 
 
-The commands I used to do this was scp WhereAmI.java s1gomez@ieng6.ucsd.edu~/ which was easily accessed using the up arrow from when I had previously typed it out, and then ssh s1gomez@ieng6.ucsd.edu "javac WhereAmI.java; java WhereAmI" and that seemed to work? I bascially just copy the file, and in the second command I logged in and compiled/ran the file.
+The commands I used to do this was scp WhereAmI.java s1gomez@ieng6.ucsd.edu~/ which was easily accessed using the up arrow from when I had previously typed it out, and then ssh s1gomez@ieng6.ucsd.edu "javac WhereAmI.java; java WhereAmI" and that seemed to work? I basically just copy the file, and in the second command I logged in and compiled/ran the file.
 ![Image](week-1-7.png)
