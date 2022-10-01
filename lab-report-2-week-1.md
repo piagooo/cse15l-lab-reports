@@ -1,6 +1,6 @@
 Here is the lab report for the first official in person lab !!
 
-1.The first step is to install Visual Studio Code! For this step, I just went to [VSCode] (https://code.visualstudio.com/) website and downloaded the version for my operating system (OSX).
+1.The first step is to install Visual Studio Code! For this step, I just went to [VSCode](https://code.visualstudio.com/) website and downloaded the version for my operating system (OSX).
 
 The image below shows what VS Code will probably look like once you open it up. 
 ![Image](week-1-6.png)
