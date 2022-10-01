@@ -11,13 +11,15 @@ Here is the lab report for the first official in person lab !!
 
 ![Image](week-1-1.png)
 
-3. Trying the Commands!
+3. Trying the Commands! After you're able to log in, you should be able to run commands on the remote server now!! You can see cd, ls, pwd, ls-lat, and more. Each of these commands does different things, pwd, for example, stands for "print working directory" which then returns the current working directory.
 ![Image](week-1-2.png)
 
-4. Moving Files!
+4. Moving Files! In this step, you learn how to move files from your local client (the computer you are using), to the remote server (the account you log into and access). As you can see in the image below, you use the code scp (secure copy), the name of the file you want to transfer (which in this case is WhereAmI.java), and the server you want to transfer it to. 
+
+--> You should be able to see a line where it gives you the name of the code, the percentage transferred, the number of characters in the file, and a few more things. 
 ![Image](week-1-3.png)
 
-5. Setting an SSH Key!!
+5. Setting an SSH Key!! 
 ![Image](week-1-4.png)
 
 6. Optimizing Remote Building
