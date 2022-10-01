@@ -1,7 +1,7 @@
 Here is the lab report for the first official in person lab !!
 
 1. The first step is to install Visual Studio Code! For this step, I just went to [VSCode] (https://code.visualstudio.com/) website and downloaded the version for my operating system (OSX).
---> The image below shows what VS Code will probably look like once you open it up. 
+---> The image below shows what VS Code will probably look like once you open it up. 
 ![Image](week-1-6.png)
 
 
@@ -19,7 +19,7 @@ Here is the lab report for the first official in person lab !!
 --> You should be able to see a line where it gives you the name of the code, the percentage transferred, the number of characters in the file, and a few more things. 
 ![Image](week-1-3.png)
 
-5. Setting an SSH Key!! 
+5. Setting an SSH Key!! Now, you will see how I made it so that I wouldn't have to retype my password everytime I log into the remote account. This can be done using the command ssh-keygen, creating a public key and private key. For this step you can see the commands needed to save the 
 ![Image](week-1-4.png)
 
 6. Optimizing Remote Building
