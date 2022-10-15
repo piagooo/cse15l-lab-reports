@@ -67,7 +67,7 @@ Then, once you're on the remote server you will type in:
 
 ```mkdir .ssh```
 
-After that, you will log out, and then once you're back on the client, you will copy the file with the public key onto the remote account:
+This is the command that makes the .ssh directory that you will be copying the public key into. (mkdir stands for make directory). If your account tells you that the directory already exists, don't worry about it, and move onto the next step. After you log out, and  once you're back on the client, you will copy the file with the public key onto the remote account:
 
 In my case, I put down: 
 
@@ -78,7 +78,12 @@ After this, you should be able to log into your remote account without inputting
 
 Based on the information given in the lab instructions, what it does is essentially create two files, the private key (id_rsa), and the public key (id_sra.pub). The public key is copied to the server, and the privete key is on the client, and ssh uses the two files instead of the password to log in. 
 
-![Image](week-1-4.png)
+Below are images to help you follow these steps if you have any questions on what you should be looking at, as well as how it looks once you have the key set up !!
+
+![Image](week-beg1.png)
+![Image](week-beg2.png)
+![Image](week-beg3.png)
+
 
 6.Optimizing Remote Building. I wasn't sure if I did this correctly but the objective of this task was to make to most "pleasant process" for making an edit to WhereAmI.java and then copying the file to the remote server and running it. 
 
@@ -95,4 +100,4 @@ and that seemed to work? I basically just copy the file, and in the second comma
 ![Image](week-1-7.png)
 
 
-And that's it!! Hopefully it works for you!1 I have to get help for my cs15lfa22 account and maybe I'll return and make changes to this page once I do. 
+And that's it!! Hopefully it works for you!!
