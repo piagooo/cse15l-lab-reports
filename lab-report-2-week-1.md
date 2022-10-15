@@ -25,9 +25,16 @@ When you log in, it will prompt you for your password, if you are using ur cs15l
 3.Trying the Commands! After you're able to log in, you should be able to run commands on the remote server now!! You can see cd, ls, pwd, ls-lat, and more. Each of these commands does different things, pwd, for example, stands for "print working directory" which then returns the current working directory.
 ![Image](week-1-2.png)
 
-4.Moving Files! In this step, you learn how to move files from your local client (the computer you are using), to the remote server (the account you log into and access). As you can see in the image below, you use the code scp (secure copy), the name of the file you want to transfer (which in this case is WhereAmI.java), and the server you want to transfer it to. 
+4.Moving Files! In this step, you learn how to move files from your local client (the computer you are using), to the remote server (the account you log into and access). As you can see in the image below, you use the code scp (secure copy), the name of the file you want to transfer (which in this case is WhereAmI.java), and the server you want to transfer it to.
 
 ```scp WhereAmI.java cs15lfa22jl@ieng6.ucsd.edu:~/```
+
+A more detailed step by step is:
+1. First, get know which files you want to transfer over
+2. Know WHERE you will be transferring them to. In this case, it will be going from your local computer onto the remote account. 
+3. You are going to use scp, which stands for secure copy, and use that to transfer over the files. Make sure you are in the correct directory while transferring over or you may run into an error. 
+4. Use the code above and the file(s) should transfer over. 
+
 
 You should be able to see a line where it gives you the name of the code, the percentage transferred, the number of characters in the file, and a few more things. 
 ![Image](week-1-3.png)
