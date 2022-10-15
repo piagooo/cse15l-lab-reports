@@ -107,4 +107,4 @@ and that seemed to work? I basically just copy the file, and in the second comma
 ![Image](week-1-7.png)
 
 
-And that's it!! Hopefully it works for you!!
+And that's it!! Hopefully it works for you!! It may seem a little confusing at first, but as long as you go step by step, it should be a breeze !!!
