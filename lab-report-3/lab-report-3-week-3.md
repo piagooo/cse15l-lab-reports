@@ -131,6 +131,9 @@ Bug:
   }
 ```
 
+Connection:
+
+
 
 
 ListExamples.java
@@ -199,6 +202,21 @@ Symptom:
 ![Image](symptom.png) 
 
 Bug:
+```
+while(index2 < list2.size()) {
+    result.add(list2.get(index2));
+    index1 += 1;
+}
+```
 
+Fixed Code:
+```
+while(index2 < list2.size()) {
+    result.add(list2.get(index2));
+    index2 += 1;
+}
+```
 
+Connection:
+The bug causes an infinite loop to be created and results in the OutOfMemoryError. This is because in the bug, instead of index2 being incremented, index2 is incremented. This means that index2 will forever be less the the size of list2, and thus, making an infinite loop. 
 
