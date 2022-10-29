@@ -2,23 +2,49 @@ Part 1:
 
 
 ![Image](searching1.png)
+
+How the website initially looks when you start the website. 
+
 ![Image](searching2.png)
+
+Using /add as a path, in this screenshot, the website calls on handleRequest, specifically the portion 
+
+```
+else if (url.getPath().contains("/add")) {
+    if (url.getQuery() == null){
+        return "Please specify what you want to add";
+}
+```
+
 ![Image](searching3.png)
+
+Searching using pencil in the query. The website calls on 
+
+
+```
+String[] parameters = url.getQuery().split("=");
+    if (parameters[1].equals("app")){
+        return String.format("Searches so far: %s", pencil);
+    }
+
+    pencil += (parameters[1] + ", ");
+    return String.format("Okay Searched!: " + parameters[1] );
+```
+
 ![Image](searching4.png)
+Searching for bananas. 
+
 ![Image](searching5.png)
+Results for "app" in the query, it returns the list of the searches made so far. 
+
 ![Image](searching6.png)
+
+What happens when you use a path that is not specified. 
+
+
+Code:
 ![Image](searching7.png)
 ![Image](searching8.png)
-
-
-
-Explain:
-(Which methods in your code are called)
-
-(What the values of the relevant arguments to those methods are, and the values of any relevant fields of the class.)
-
-(If those values change, how they change by the time the request is done processing)
-
 
 
 
@@ -77,13 +103,6 @@ class SearchEngine {
 
 Part Two:
 
-Failure-Inducing Input (Code of the Test)
-Symptom (The failing test output)
-Bug (The code fix needed)
-(Explain the connection between the symptom and the bug. Why does the bug cause that particular symptom for that particular input)
-
-
-
 ArrayExamples.java
 
 Code:
@@ -133,6 +152,7 @@ Bug:
 
 Connection:
 The bug causes the symptom because it sets the value of the indexes in arr to the value of the indexes in newArray. Since newArray was just created, it doesn't have any values, so it just returns zeros. Therefore, the change that needed to be made was setting the newArray[i] to the designated value of arr (`arr[arr.length-i-l]`), and therefore, allowing the newArray to have the contents of arr in reversed order. 
+
 
 
 
