@@ -132,6 +132,7 @@ Bug:
 ```
 
 Connection:
+The bug causes the symptom because it sets the value of the indexes in arr to the value of the indexes in newArray. Since newArray was just created, it doesn't have any values, so it just returns zeros. Therefore, the change that needed to be made was setting the newArray[i] to the designated value of arr (`arr[arr.length-i-l]`), and therefore, allowing the newArray to have the contents of arr in reversed order. 
 
 
 
