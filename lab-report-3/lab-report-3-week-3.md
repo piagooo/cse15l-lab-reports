@@ -85,6 +85,19 @@ Bug (The code fix needed)
 
 
 ArrayExamples.java
+
+Code:
+```
+static int[] reversed(int[] arr){
+   int [] newArray = new int[arr.length];
+   for (int i = 0; i < arr.length; i += 1){
+     arr[i] = newArray[arr.length-i-1];
+  }
+  return arr;
+  }
+```
+
+
 Failure-Inducing Input:
 
 ```
@@ -102,16 +115,6 @@ Symptom:
 
 Bug:
 
-```
-  static int[] reversed(int[] arr){
-   int [] newArray = new int[arr.length];
-   for (int i = 0; i < arr.length; i += 1){
-     arr[i] = newArray[arr.length-i-1];
-  }
-  return arr;
-  }
-```
-
  ```
     arr[i] = newArray[arr.length-i-1];
  ```
@@ -127,3 +130,75 @@ Bug:
     return newArray;
   }
 ```
+
+
+
+ListExamples.java
+
+Code:
+```
+static List<String> merge(List<String> list1, List<String> list2) {
+    List<String> result = new ArrayList<>();
+    int index1 = 0, index2 = 0;
+    while(index1 < list1.size() && index2 < list2.size()) {
+      if(list1.get(index1).compareTo(list2.get(index2)) < 0) {
+        result.add(list1.get(index1));
+        index1 += 1;
+      }
+      else {
+        result.add(list2.get(index2));
+        index2 += 1;
+      }
+    }
+    while(index1 < list1.size()) {
+      result.add(list1.get(index1));
+      index1 += 1;
+    }
+    while(index2 < list2.size()) {
+      result.add(list2.get(index2));
+      index1 += 1;
+    }
+    return result;
+  }
+```
+
+Failure-Inducing Input (It's long and bulky because I didn't realize that it was the bug causeing the test to fail, not the test I had written):
+
+```
+@Test
+    public void merge1(){
+        List<String> List1 = new ArrayList<String>();
+        List<String> List2 = new ArrayList<String>();
+
+        List1.add("a");
+        List1.add("b");
+        List1.add("c");
+        List2.add("d");
+        List2.add("e");
+        List2.add("f");
+
+        
+        List<String> results =  new ArrayList<String>();
+        results.add("a");
+        results.add("b");
+        results.add("c");
+        results.add("d");
+        results.add("e");
+        results.add("f");
+
+
+        assertEquals(results, ListExamples.merge(List1, List2));
+        
+    }
+
+```
+
+
+Symptom:
+
+![Image](symptom.png) 
+
+Bug:
+
+
+
