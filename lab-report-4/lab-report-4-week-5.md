@@ -73,6 +73,7 @@ s = socket
 ```
 less -S technical/911report/chapter-1.txt
 ```
+The above command cuts off the lines longer than the screen width. Usually, the longer lines just wrap inorder to fit the screen, but with this command, the rest of the sentence is just cut off. This is useful if you only need to see the first parts of the sentences. 
 
 
 ![Image](less-N.png)
@@ -80,6 +81,7 @@ less -S technical/911report/chapter-1.txt
 ```
 less -N technical/911report/chapter-1.txt
 ```
+This command makes it so that a line number is displayed at the beginning of each line in the file content display. 
 
 
 ![Image](less-X.png)
@@ -87,3 +89,5 @@ less -N technical/911report/chapter-1.txt
 ```
 less -X technical/911report/chapter-1.txt
 ```
+
+less-X makes it so that even after the file content display is exited, you can still see the file's content. 
