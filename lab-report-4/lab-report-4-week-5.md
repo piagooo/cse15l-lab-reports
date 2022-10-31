@@ -1,4 +1,4 @@
-For this lab report, I used the files from the repository from week 4 lab. Those files can be found [here](https://github.com/ucsd-cse15l-f22/docsearch/). The format follows image then text, then explanation. find-result.txt contains the files from technical but input into a file (using output redirection). 
+For this lab report, I used the files from the repository from week 4 lab. Those files can be found [here](https://github.com/ucsd-cse15l-f22/docsearch/). The format follows image then text, then explanation. find-result.txt contains the files from technical but input into a file (using output redirection).   
 
 ![Image](grep-H.png)
 
@@ -51,12 +51,20 @@ When this command is run, it returns true if the file has `n` amount of links. I
 find technical -type d
 ```
 
-
 ![Image](find-type-f.png)
 
 ```
 find technical/plos -type f
 ```
+I did two examples of the same command above, but basically, it returns true if the type of file in the directory or file. The code itself is `find (directory or whatever you are looking in) -type t` where t is type. Possible types are:
+b = block special
+c = character special 
+d = directory 
+f = regular file
+l = symbolic link
+p = FIFO
+s = socket 
+
 
 
 ![Image](less-S.png)
