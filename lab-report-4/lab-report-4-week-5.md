@@ -90,4 +90,4 @@ This command makes it so that a line number is displayed at the beginning of eac
 less -X technical/911report/chapter-1.txt
 ```
 
-less-X makes it so that even after the file content display is exited, you can still see the file's content. 
+less-X makes it so that even after the file content display is exited, you can still see the file's content. !
