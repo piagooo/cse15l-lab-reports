@@ -72,10 +72,6 @@ Student Submission: [Correct Methods](https://github.com/ucsd-cse15l-f22/list-me
 
 Tracing the Script:
 
-1. For each line with a command, what is it's standard output and standard error for the run, whether the return code is zero or a nonzero.
-2. For each line with an if statement, whether the condition was true or false, and why. 
-3. Indicate each line that does not run (maybe because it's in an if branch that doesn't evaluate, or after an early exit)
-
 For this section, I will be describing what grade.sh does with the submission with the [correct methods](https://github.com/ucsd-cse15l-f22/list-methods-corrected).
 
 I will be using the line numbers in order to refer to the commands as stated in these provided images. The format for command stdout, stderr, and exit code follows (stdout, stderr, exit_code) for the lines with commands. (Please note that I got my answers from redirecting the outputs and errors to files that aren't shown in the code above or below because I didn't have them when I got my screenshots.)
@@ -83,43 +79,52 @@ I will be using the line numbers in order to refer to the commands as stated in 
 ![Image](grade-sh-1.png)
 ![Image](grade-sh-2.png)
 
-4) (none --> no output for this, none, zero) 
-5) (none --> no output for this, none, zero) // Please not that $1 is the github link that is included when we run bash grade.sh (link).
+Line 4: (none --> no output for this, none, zero) 
 
-7) Creates variable called FILE1 that stands for the name of the student submitted file. 
+Line 5: (none --> no output for this, none, zero) // Please not that $1 is the github link that is included when we run bash grade.sh (link).
 
-9) (none --> no output for this, none, zero)  // Successfully copies TestListExamples.java into the student-submission directory. 
-10)(none --> no output for this, none, zero) // Successfully changes the directory to student submission so that we can run our commands and actually test the file. 
+Line 7: Creates variable called FILE1 that stands for the name of the student submitted file. 
 
-12) Creates variable with the class path needed in order to run jUnit. 
+Line 9: (none --> no output for this, none, zero)  // Successfully copies TestListExamples.java into the student-submission directory. 
 
-14) If Statement: [ -e "$FILE1" ] --> Condition is true because for this student submission, ListExamples.java DOES exist and is in the correct directory. 
-15) then
-16) ("Correct File: ListExamples.java found", none, zero) --> Since the file does exist, the output for this is just the text being echoed. 
+Line 10: (none --> no output for this, none, zero) // Successfully changes the directory to student submission so that we can run our commands and actually test the file. 
 
-17 - 19) dnr (did not run) since the if statement was true and ListExamples.java does exist, these lines do not run. 
+Line 12: Creates variable with the class path needed in order to run jUnit. 
 
+Line 14: If Statement: [ -e "$FILE1" ] --> Condition is true because for this student submission, ListExamples.java DOES exist and is in the correct directory. 
 
+Line 15: then
 
+Line 16: ("Correct File: ListExamples.java found", none, zero) --> Since the file does exist, the output for this is just the text being echoed. 
 
-23) (none, none, zero) --> The files were able to successfully compile. 
-
-25) if statement: Returns true nf the exit code for the prior command (javac) was zero (AKA: ran successfully / compiled) --> In this case, the exit code for the command above was zero, meaning that this if condition is true. 
-26) then
-27) ("Files Compiled", none, zero) --> Another echo command, this meands the out put is the text of the echo. 
-
-29 - 32) dnr --> If the file had been unable to compile, it would've have echoed a different text and then had an early exit. 
-
-35) (JUnit version 4.13.2 ... Time: 0.019 OK (3 tests), none, zero) --> This command actually runs the jUnit tests and redircts the output to a file called normal-out.txt. In the case of any errors, the command redirects the errors to a file known as err-out.txt; Since the file is able to run properly, the exit code is also zero. 
+Lines 17 - 19: dnr (did not run) since the if statement was true and ListExamples.java does exist, these lines do not run. 
 
 
-38) if statement 
-39) then 
-40)
-41)
-42) dnr
-43) dnr
-44) dnr
 
 
-47) cat err.out.txt
+Line 23: (none, none, zero) --> The files were able to successfully compile. 
+
+Line 25: if statement: Returns true nf the exit code for the prior command (javac) was zero (AKA: ran successfully / compiled) --> In this case, the exit code for the command above was zero, meaning that this if condition is true. 
+
+Line 26: then
+
+Line 27: ("Files Compiled", none, zero) --> Another echo command, this meands the out put is the text of the echo. 
+
+Lines 29 - 32: dnr --> If the file had been unable to compile, it would've have echoed a different text and then had an early exit. 
+
+Line 35: (JUnit version 4.13.2 ... Time: 0.019 OK (3 tests), none, zero) --> This command actually runs the jUnit tests and redircts the output to a file called normal-out.txt. In the case of any errors, the command redirects the errors to a file known as err-out.txt; Since the file is able to run properly, the exit code is also zero. 
+
+
+Line 38: if statement: returns true if the exit code for the privious command is zero (AKA: java was able to run the program). In this case, the if condition is true because the examples were able to run. 
+
+Line 39: then
+
+Line 40: ("OK (3 tests)", none, zero) --> looks for "tests" (case sensitive) within normal-out.txt and redirects that output to Score.txt
+
+Line 41: ("OK (3 tests) out of 3 tests passed!!", none, zero) --> echos content of Score.txt and lets you know your code had all three out of three tests pass.
+
+Line 42 - 44: dnr --> In the case that the file had some failed tests, grade.sh owuld have grepped the line with "Tests" (case sensitive) within normal-out.txt and redirected that to Failures.txt. It then would have echoed the contents of Failures.txt as well as the text " - Please try again !!"
+
+
+
+Line 47: (none, none, zero) (I believe that this line runs, however, since the content of err-out.txt is empty (since there weren't any errors), then there's no output or errors). In the case that there are any errors, this file would have printed the contents of the file containing the std error output of Line 35. 
