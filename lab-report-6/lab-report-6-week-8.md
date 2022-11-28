@@ -81,7 +81,7 @@ I will be using the line numbers in order to refer to the commands as stated in 
 
 Line 4: (none --> no output for this, none, zero) 
 
-Line 5: (none --> no output for this, none, zero) // Please not that $1 is the github link that is included when we run bash grade.sh (link).
+Line 5: ("Cloning into 'student-submission'...", none, zero) // Please not that $1 is the github link that is included when we run bash grade.sh (link).
 
 Line 7: Creates variable called FILE1 that stands for the name of the student submitted file. 
 
