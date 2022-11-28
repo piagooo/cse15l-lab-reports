@@ -1,6 +1,6 @@
 Code for Grade.sh
-```
 
+```
 # set -e
 
 rm -rf student-submission
